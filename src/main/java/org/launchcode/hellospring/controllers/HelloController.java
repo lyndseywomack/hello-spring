@@ -36,8 +36,8 @@ public class HelloController {
 
     @PostMapping("form")
     @ResponseBody
-    public String languageResponse(@RequestParam String name, String languages) {
-        if(!(name.equals(" "))){
+    public String createMessage(@RequestParam String name, String languages) {
+        if(!(name.equals(" ")|| name.equals(""))){
             if (languages.equals("english")) {
                 return "Hello, " + name + "!";
             } else if (languages.equals("french")) {
